@@ -1,0 +1,8 @@
+{
+  "name": "polytopic",
+  "workspaces": [
+    "packages/core",
+    "packages/linalg",
+    "packages/playground"
+  ]
+}

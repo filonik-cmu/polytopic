@@ -1,0 +1,37 @@
+{
+  "name": "@filonik-cmu/linalg",
+  "version": "0.1.0",
+  "private": true,
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/linalg.umd.js",
+  "module": "./dist/linalg.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/linalg.es.js",
+      "require": "./dist/linalg.umd.js"
+    }
+  },
+  "dependencies": {
+    "@types/ndarray": "^1.0.11",
+    "@types/ndarray-ops": "^1.2.5",
+    "ndarray": "^1.0.19",
+    "ndarray-ops": "^1.2.2",
+    "ndarray-show": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.0",
+    "typescript": "~5.2.0",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.1.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tsc": "tsc"
+  }
+}
