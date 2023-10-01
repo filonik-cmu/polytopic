@@ -1,0 +1,50 @@
+<template>
+  <svg width="79.844048mm" height="92.542969mm" viewBox="0 0 79.844048 92.542969" version="1.1" xml:space="preserve"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+    <g transform="translate(-66.145859,-102.46587)">
+      <g transform="translate(8.7561152)">
+        <circle style="fill:currentColor;stroke-width:0.264583" id="path1" cx="97.386368" cy="106.35484" r="3.8889689" />
+        <circle style="fill:currentColor;stroke-width:0.264583" id="path1-55" cx="97.386368" cy="191.11987" r="3.8889689" />
+        <circle style="fill:currentColor;stroke-width:0.264583" id="path1-3" cx="70.034828" cy="134.60985" r="3.8889689" />
+        <circle style="fill:currentColor;stroke-width:0.264583" id="path1-8" cx="97.386368" cy="134.60985" r="3.8889689" />
+        <circle style="fill:currentColor;stroke-width:0.264583" id="path1-5" cx="124.58871" cy="134.60985" r="3.8889689" />
+        <circle style="fill:currentColor;stroke-width:0.264583" id="path1-3-1" cx="70.134293" cy="162.86487" r="3.8889689" />
+        <circle style="fill:currentColor;stroke-width:0.264583" id="path1-8-8" cx="97.386368" cy="162.86487" r="3.8889689" />
+        <circle style="fill:currentColor;stroke-width:0.264583" id="path1-5-7" cx="124.58871" cy="162.86487" r="3.8889689" />
+        <g style="stroke-width:2.5;stroke-dasharray:none"
+          transform="matrix(0.75627023,0,0,1.0038905,16.924341,-0.57817407)">
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="M 75.445864,128.78782 99.466386,111.31953" id="path2" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="M 137.22632,128.78782 113.2058,111.31953" id="path2-7" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="m 106.15745,127.74027 -0.0765,-15.37318" id="path2-7-9" />
+        </g>
+        <g style="stroke-width:2.5;stroke-dasharray:none"
+          transform="matrix(0.75627023,0,0,1.0038905,16.924341,-0.57817407)">
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="m 75.524207,168.43482 24.020516,17.46829" id="path2-6" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="m 137.30466,168.43482 -24.02052,17.46829" id="path2-7-3" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="m 106.23579,169.48238 -0.0765,15.37318" id="path2-7-9-6" />
+        </g>
+        <g style="stroke-width:2.5;stroke-dasharray:none"
+          transform="matrix(0.75627023,0,0,1.0038905,16.924341,-0.57817407)">
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="m 135.67113,139.97939 -24.02052,17.46829" id="path2-7-3-0" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="M 100.8351,139.97939 76.814591,157.44768" id="path2-7-3-0-8" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="M 76.299792,139.97939 100.3203,157.44768" id="path2-7-3-0-3" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="m 112.3675,139.97939 24.02051,17.46829" id="path2-7-3-0-8-7" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="m 142.53773,141.02695 -0.0765,15.37318" id="path2-7-9-6-7" />
+          <path style="fill:currentColor;stroke:currentColor;stroke-width:2.86918;stroke-dasharray:none;stroke-opacity:1"
+            d="m 70.234771,141.02695 -0.0765,15.37318" id="path2-7-9-6-7-9" />
+        </g>
+      </g>
+    </g>
+  </svg>
+</template>

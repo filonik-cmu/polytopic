@@ -5,7 +5,11 @@
 @tailwind utilities;
 
 body {
-  @apply h-[100svh] bg-background text-text;
+  @apply h-[100svh] bg-stone-300 text-stone-900 dark:bg-stone-900 dark:text-stone-400;
+}
+
+button {
+  @apply text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg;
 }
 
 #app {
@@ -13,7 +17,7 @@ body {
 }
 
 main {
-  @apply flex-grow overflow-scroll;
+  @apply flex-grow overflow-hidden;
 }
 
 a {
