@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     monacoEditorPlugin({
-      publicPath: "https://filonik-cmu.github.io/polytopic/monacoeditorwork"
+      publicPath: ""
     }),
   ],
   resolve: {
