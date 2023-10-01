@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     monacoEditorPlugin({
-      publicPath: ""
+      publicPath: "."
     }),
   ],
   resolve: {
