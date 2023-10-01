@@ -8,7 +8,9 @@ import monacoEditorPlugin from 'vite-plugin-monaco-editor'
 export default defineConfig({
   plugins: [
     vue(),
-    monacoEditorPlugin({}),
+    monacoEditorPlugin({
+      publicPath: "https://filonik-cmu.github.io/polytopic/monacoeditorwork"
+    }),
   ],
   resolve: {
     alias: {
