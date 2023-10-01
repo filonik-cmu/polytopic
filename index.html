@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>self["MonacoEnvironment"] = (function (paths) {
+          return {
+            globalAPI: false,
+            getWorkerUrl : function (moduleId, label) {
+              var result =  paths[label];
+              if (/^((http:)|(https:)|(file:)|(\/\/))/.test(result)) {
+                var currentUrl = String(window.location);
+                var currentOrigin = currentUrl.substr(0, currentUrl.length - window.location.hash.length - window.location.search.length - window.location.pathname.length);
+                if (result.substring(0, currentOrigin.length) !== currentOrigin) {
+                  var js = '/*' + label + '*/importScripts("' + result + '");';
+                  var blob = new Blob([js], { type: 'application/javascript' });
+                  return URL.createObjectURL(blob);
+                }
+              }
+              return result;
+            }
+          };
+        })({
+  "editorWorkerService": "/polytopic/monacoeditorwork/editor.worker.bundle.js",
+  "css": "/polytopic/monacoeditorwork/css.worker.bundle.js",
+  "html": "/polytopic/monacoeditorwork/html.worker.bundle.js",
+  "json": "/polytopic/monacoeditorwork/json.worker.bundle.js",
+  "typescript": "/polytopic/monacoeditorwork/ts.worker.bundle.js",
+  "javascript": "/polytopic/monacoeditorwork/ts.worker.bundle.js",
+  "less": "/polytopic/monacoeditorwork/css.worker.bundle.js",
+  "scss": "/polytopic/monacoeditorwork/css.worker.bundle.js",
+  "handlebars": "/polytopic/monacoeditorwork/html.worker.bundle.js",
+  "razor": "/polytopic/monacoeditorwork/html.worker.bundle.js"
+});</script>
+
     <meta charset="UTF-8">
     <link rel="icon" href="/polytopic/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Text+Me+One">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
-    <script type="module" crossorigin src="/polytopic/assets/index-a2dec8eb.js"></script>
-    <link rel="stylesheet" href="/polytopic/assets/index-1bda4899.css">
+    <title>Polytopic</title>
+    <script type="module" crossorigin src="/polytopic/assets/index-3a83cc90.js"></script>
+    <link rel="stylesheet" href="/polytopic/assets/index-fd9867c7.css">
   </head>
   <body>
     <div id="app"></div>
