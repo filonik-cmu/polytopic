@@ -1,3 +1,5 @@
+import { arrays as A, functions as F } from '@filonik-cmu/core'
+
 // Functions
 
 export const identity: <T>(value: T) => T = (value) => value
@@ -52,13 +54,14 @@ const range: (lower: number, upper: number) => number[] = (lower, upper) => from
 
 export const padded: <T>(values: T[], defaultValue: T) => (i: number) => T = (values, defaultValue) => (i) => i<values.length? values[i]: defaultValue
 
-export const mapWith: <S,T>(f: (value: S) => T) => (values: S[]) => T[] = (f) => (values) => values.map(f)
-
 const mul = <T>(...a: T[][]) => reduceL(mMul<T>())(a)
 
 export const indices: (shape: number[]) => number[][] = (shape) => mul(...shape.map(upper => range(0, upper)))
 
-export const materialize: <T>(f:  (...indices: number[]) => T) => (shape: number[]) => T[] = (f) => (shape) => mapWith(unpack(f))(indices(shape))
+//export const indices: <T extends unknown[]>(...shape: T) => T[] = (...shape) => indices_(shape) as any as T[]
+
+
+export const materialize: <T>(f:  (...indices: number[]) => T) => (shape: number[]) => T[] = (f) => (shape) => A.mapWith(unpack(f))(indices(shape))
 
 export const full:  <T>(value: T) => (shape: number[]) => T[] =  (value) => materialize(constant(value))
 

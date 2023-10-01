@@ -29,7 +29,8 @@ import type {
   HMatrix,
 } from './types'
 
-import { constant, indices, mapWith, zeros, padded, unpack } from './core'
+import { arrays as A, functions as F } from '@filonik-cmu/core'
+import { constant, indices, zeros, padded } from './core'
 
 import ndarray from 'ndarray'
 import ndarrayOps from 'ndarray-ops'
@@ -57,10 +58,10 @@ export const show: (x: NumNdArray) => string = ndarrayShow
 
 export const vec: VectorTypeType = makeType<VectorTypeConstructors, VectorTypeMethods, VectorTypeType>((n) => {
   const _shape = [n]
-  const _indices = indices(_shape)
+  const _indices = indices(_shape) as [number][]
   const vm: VectorMethods = {
     from: (f) => {
-      return ndarray(mapWith(unpack(f))(_indices), _shape)
+      return ndarray(A.mapWith(F.unpack(f))(_indices), _shape)
     },
     fromArgs: (...values) => {
       return vt.from(padded(values, 0))
@@ -78,7 +79,7 @@ export const vec: VectorTypeType = makeType<VectorTypeConstructors, VectorTypeMe
       return (value as ndarray.NdArray<any[]>).data
     },
     full: (value) => {
-      return vt.from(constant(value))
+      return vt.from(F.constant(value))
     },
     zeros: () => {
       return vt.full(0)
@@ -98,10 +99,10 @@ export const vec: VectorTypeType = makeType<VectorTypeConstructors, VectorTypeMe
 
 export const mat: MatrixTypeType = makeType<MatrixTypeConstructors, MatrixTypeMethods, MatrixTypeType>((m, n) => {
   const _shape = [m, n]
-  const _indices = indices(_shape)
+  const _indices = indices(_shape) as [number,number][]
   const mm: MatrixMethods = {
     from: (f) => {
-      return ndarray(mapWith(unpack(f))(_indices), _shape)
+      return ndarray(A.mapWith(F.unpack(f))(_indices), _shape)
     },
     fromArgs: (...values) => {
       return mt.from(padded(values, 0))

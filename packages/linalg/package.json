@@ -8,6 +8,7 @@
   ],
   "main": "./dist/linalg.umd.js",
   "module": "./dist/linalg.es.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -16,6 +17,7 @@
     }
   },
   "dependencies": {
+    "@filonik-cmu/core": "^0.1.0",
     "@types/ndarray": "^1.0.11",
     "@types/ndarray-ops": "^1.2.5",
     "ndarray": "^1.0.19",

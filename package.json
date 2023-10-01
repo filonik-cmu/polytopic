@@ -1,5 +1,13 @@
 {
   "name": "polytopic",
+  "version": "0.1.0",
+  "author": "Daniel Filonik",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "~5.2.0",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.6.0"
+  },
   "workspaces": [
     "packages/core",
     "packages/linalg",
