@@ -4,6 +4,7 @@ import { useEventListener } from '@vueuse/core';
 
 import * as Babel from '@babel/standalone'
 
+import { PlayIcon } from '@heroicons/vue/24/solid'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 
 import CodeEditor from "@/components/CodeEditor.vue"
@@ -83,6 +84,7 @@ const shouldRun = (e: KeyboardEvent) => {
 }
 
 const run = () => {
+  console.log("run")
   try {
     const code = compile(state.input.text)
     state.output.compiled = code
@@ -107,11 +109,14 @@ useEventListener(document, 'keydown', (e) => {
   <header>Header</header>
   <main class="flex-grow main_content bg-gray-600" :style="mainStyle">
     <div class="flex bg-gray-300 text-sm items-center" @click="toggleSection('ibody')">
-      Input
+      <span>Input</span>
+      <button @click.stop="run()" class="rounded-sm p-0.5" type="button">
+        <PlayIcon class="w-4 h-4"/>
+      </button>
     </div>
     <CodeEditor v-model="state.input.text" class="overflow-hidden"/>
     <div class="flex bg-gray-300 text-sm items-center" @click="toggleSection('obody')">
-      Output
+      <span>Output</span>
     </div>
     <div class="overflow-auto bg-gray-400">
       <TabGroup>
