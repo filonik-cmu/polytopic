@@ -84,12 +84,14 @@ const shouldRun = (e: KeyboardEvent) => {
 }
 
 const run = () => {
-  console.log("run")
   try {
+    console.log("compile")
     const code = compile(state.input.text)
     state.output.compiled = code
+    console.log("evaluate")
     const value = evaluate(code)
     state.output.evaluated = JSON.stringify(value)
+    console.log("result", value)
     //state.output.hasse = renderHasse(value)
     //state.output.scene = renderScene(value)
   } catch (e: any) {
