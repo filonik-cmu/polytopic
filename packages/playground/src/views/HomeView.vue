@@ -2,9 +2,11 @@
 import { reactive, ref } from "vue"
 import { useDark, useEventListener, useToggle } from '@vueuse/core';
 
-import { SunIcon, MoonIcon, PlayIcon } from '@heroicons/vue/24/solid'
+import { SunIcon, MoonIcon, ShareIcon, PlayIcon } from '@heroicons/vue/24/solid'
+
 import IconLogo from "@/components/icons/IconLogo.vue"
 import CodeEditor from "@/components/CodeEditor.vue"
+
 //import { vec } from "@filonik-cmu/linalg"
 
 const isDark = useDark()
@@ -12,7 +14,7 @@ const toggleDark = useToggle(isDark)
 
 const state = reactive({
   input: {
-    text: 'alert("Hello world!")\n',
+    text: 'window.alert("Hello world!")\n',
   },
   output: {
     text: '',
@@ -74,14 +76,17 @@ const year = ref(new Date().getFullYear())
 </script>
 
 <template>
-  <header class="flex flex-row items-center gap-1 p-1">  
+  <header class="flex flex-row items-center gap-2 p-1">  
     <!--<img class="w-8 h-8" src="@/assets/polytopic-dark.svg"/>-->
     <IconLogo class="w-8 h-8 text-black dark:text-white" />
     <span class="logo">Polytopic</span>
     <span class="flex-grow"></span>
-    <button @click="toggleDark()" class="text-sm p-2.5" type="button">
+    <button @click="toggleDark()" class="rounded-lg p-2" type="button">
       <MoonIcon class="w-5 h-5" :class="[isDark? 'hidden': 'visible']"/>
-      <SunIcon class="w-5 h-5" :class="[isDark? 'visible': 'hidden']"/>
+      <SunIcon class="w-6 h-6" :class="[isDark? 'visible': 'hidden']"/>
+    </button>
+    <button class="rounded-lg p-2" type="button">
+      <ShareIcon class="w-5 h-5"/>
     </button>
   </header>
   <main>
@@ -91,7 +96,7 @@ const year = ref(new Date().getFullYear())
           Input
         </span>
         <span class="flex-grow"></span>
-        <button @click="run()" class="text-sm p-0.5" type="button">
+        <button @click="run()" class="rounded-sm p-0.5" type="button">
           <PlayIcon class="w-4 h-4"/>
         </button>
       </div>

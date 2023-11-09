@@ -7,3 +7,4 @@ export const pack: <T extends unknown[], U>(f: (args: [...T]) => U) => (...args:
 export const args: <T extends unknown[]>(...args: T) => [...T] = (...args) => args
 
 //export const indices: <T extends unknown[]>(...shape: T) => T[] = (...shape) => [shape]
+

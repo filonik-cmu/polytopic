@@ -15,3 +15,12 @@ export const pushR = <T>(values: T[], value: T) => [...values, value]
 export const pushL = <T>(values: T[], value: T) => [value, ...values]
 
 export const mapWith: <T,U>(f: (value: T) => U) => (values: T[]) => U[] = (f) => (values) => values.map(f)
+
+//type Map<F, T extends unknown[]> = { [K in keyof T]: F<T[K]> };
+
+//type MapArray<T extends unknown[]> = { [K in keyof T]: Array<T[K]> };
+//type MapGenerator<T extends unknown[],  TReturn = any, TNext = unknown> = { [K in keyof T]: Generator<T[K], TReturn, TNext> };
+
+//const mapN: <T extends unknown[], U>(f: (...args: T) => U) => (...args: MapArray<T>) => Array<U> = (f) => (...argss) => []
+//
+//const x = mapN((x: number, y: number) => x+y)

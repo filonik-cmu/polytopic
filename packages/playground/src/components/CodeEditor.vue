@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref, watch } from 'vue'
-import { useDark, useVModel } from "@vueuse/core"
+import { useDark, useResizeObserver, useVModel } from "@vueuse/core"
 
 //import * as monaco from 'monaco-editor/esm/vs/editor/editor.api'
 import * as monaco from 'monaco-editor'
@@ -19,6 +19,7 @@ const isDark = useDark()
 const theme = computed(() => isDark.value? 'vs-dark': 'vs')
 
 const options: monaco.editor.IStandaloneEditorConstructionOptions = {
+  automaticLayout: false,
   language: "javascript",
   theme: theme.value,
   minimap: { enabled: false },
@@ -35,8 +36,13 @@ onMounted(() => {
     editor.onDidChangeModelContent(() => {
       value.value = editor.getValue()
     })
-    
   }
+})
+
+useResizeObserver(domElement, (entries) => {
+  const { width, height } = entries[0].contentRect
+  //console.log("resize", width, height)
+  editor.layout({ width, height })
 })
 
 watch(theme, (value) => {
